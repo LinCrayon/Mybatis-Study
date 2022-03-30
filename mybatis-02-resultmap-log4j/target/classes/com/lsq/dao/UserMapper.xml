@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lsq.dao.UserMapper">
+
+<!--    <select id="selectUserById" resultType="User">-->
+<!--        select * from user where id = #{id}-->
+<!--        select id , name , pwd as password from user where id = #{id}   &#45;&#45;方案一：为列名指定别名 , 别名和java实体类的属性名一致 .-->
+<!--    </select>-->
+
+<!--  方案二:使用结果集映射->ResultMap -->
+
+    <resultMap id="UserMap" type="User">
+        <!-- id为主键-->
+        <id column="id" property="id"/>
+        <!-- column是数据库表的列名 , property是对应实体类的属性名 -->
+        <result column="name" property="name"/>
+        <result column="pwd" property="password"/>
+    </resultMap>
+
+    <select id="selectUserById" resultMap="UserMap">
+        select id , name , pwd from user where id = #{id}
+    </select>
+
+    <select id="selectUserLog" resultMap="UserMap">
+        select * from user
+    </select>
+
+    <select id="selectUserLimit" parameterType="map" resultType="user" resultMap="UserMap">
+        select * from user limit #{startIndex},#{pageSize}
+    </select>
+
+    <select id="getUserByRowBounds" resultMap="UserMap">
+        select * from user
+    </select>
+
+
+
+</mapper>
