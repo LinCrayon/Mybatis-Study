@@ -12,7 +12,11 @@
 
     <settings>
         <setting name="logImpl" value="LOG4J"/>
+
+        <setting name="cacheEnabled" value="true"/>
     </settings>
+
+
 
 
     <!--配置别名,注意顺序-->
@@ -35,24 +39,12 @@
 </environments>
 
     <mappers>
-        <mapper resource="com/lsq/dao/UserMapper.xml"/>
+        <mapper resource="mapper/UserMapper.xml"/>
     </mappers>
 
 
 
 </configuration>
-
-
-<!--    有三种内建的数据源类型-->
-
-<!--    type="[UNPOOLED|POOLED|JNDI]"）-->
-<!--    unpooled：这个数据源的实现只是每次被请求时打开和关闭连接。-->
-<!--    pooled：这种数据源的实现利用“池”的概念将 JDBC 连接对象组织起来 , 这是一种使得并发 Web 应用快速响应请求的流行处理方式。-->
-<!--    jndi：这个数据源的实现是为了能在如 Spring 或应用服务器这类容器中使用，容器可以集中或在外部配置数据源，然后放置一个 JNDI 上下文的引用。-->
-
-
-
-
 
 <!--    configuration（配置）       -->
 <!--    properties（属性）          -->

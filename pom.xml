@@ -12,6 +12,9 @@
         <module>mybatis-01</module>
         <module>mybatis-02-resultmap-log4j</module>
         <module>mybatis-03-annotation-sql</module>
+        <module>mybatis-on-many</module>
+        <module>mybatis-04-dynamic-sql</module>
+        <module>mybatis-05-cache</module>
     </modules>
 
     <properties>

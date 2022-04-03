@@ -3,5 +3,7 @@
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/mybatis-01/src/main/java/com/lsq/dao/UserMapper.xml" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/mybatis-02-resultmap-log4j/src/main/java/com/lsq/dao/UserMapper.xml" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/mybatis-04-dynamic-sql/src/main/resources/mapper/BlogMapper.xml" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/mybatis-05-cache/src/main/resources/mapper/UserMapper.xml" dialect="GenericSQL" />
   </component>
 </project>
