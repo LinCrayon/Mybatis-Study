@@ -7,13 +7,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mybatis-05-cache" />
         <module name="mybatis-on-many" />
-        <module name="mybatis-03-annotation-sql" />
-        <module name="mybatis-04-dynamic-sql" />
         <module name="mybatis-01" />
         <module name="mybatis-02-resultmap-log4j" />
+        <module name="mybatis-05-cache" />
+        <module name="mybatis-03-annotation-sql" />
+        <module name="mybatis-many-one" />
+        <module name="mybatis-04-dynamic-sql" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mybatis-one-many" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
